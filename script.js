@@ -3,11 +3,12 @@ let playGame = true;
 while (playGame) {
 
     let flag = 0
-    const randomNumber = Math.floor(Math.random() * 10) + 1;
+    end = 100 //Крайнее число диапозона
+    const randomNumber = Math.floor(Math.random() * end) + 1;
     let attempts = 5;
 
     while (attempts > 0) {
-        let guess = prompt("Угадайте число от 1 до 10. У вас осталось " + attempts + " попыток.");
+        let guess = prompt("Угадайте число от 1 до " + end + ". У вас осталось " + attempts + " попыток.");
 
         // Отмена
         if (guess === null) {
